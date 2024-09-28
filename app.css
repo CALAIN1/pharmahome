@@ -1,0 +1,155 @@
+/* Global styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #89da8d;
+    color: #333;
+}
+
+h1,
+h2 {
+    color: #333;
+    text-align: center;
+}
+
+input,
+button {
+    display: block;
+    width: 90%;
+    margin: 10px auto;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #1c093e;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #1a218c;
+}
+
+.page {
+    display: none;
+    padding: 20px;
+}
+
+.page.active {
+    display: block;
+}
+
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.logo {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
+}
+
+/* Ajout du style pour le "ans" après l'âge */
+#age-unit {
+    display: inline-block;
+    margin-left: 10px;
+    font-size: 16px;
+    color: #333;
+}
+
+/* Bottom navigation */
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #89da8d;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0;
+}
+
+.bottom-nav .nav-item {
+    text-align: center;
+    color: white;
+}
+
+.dashboard-card {
+    background-color: #9cd7f6;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.dashboard-card button {
+    margin-top: 10px;
+}
+
+/* Style pour la bulle avec les initiales */
+.user-initials {
+    background-color: #ffebcc;
+    border-radius: 50%;
+    color: white;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    cursor: pointer;
+    margin-left: 30px;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+}
+
+/* Petit bouton de déconnexion */
+.logout-btn {
+    font-size: 12px;
+    padding: 5px 10px;
+    background-color: #006400;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    width: 35%;
+}
+
+.logout-btn:hover {
+    background-color: #004d00;
+}
+
+/* Style caché pour les détails de l'utilisateur */
+#user-details.hidden {
+    display: none;
+}
+
+#user-details {
+    padding: 20px;
+    background-color: #ffebcc;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+/* Responsive design */
+@media (min-width: 768px) {
+    body {
+        font-size: 18px;
+    }
+
+    input,
+    button {
+        width: 80%;
+    }
+}

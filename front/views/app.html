@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../styles/global.css">
+    <link rel="stylesheet" href="../styles/dashboard.css">
+
+    <title>PharmaHome - Application Mobile</title>
+</head>
+
+<body>
+    <!-- Page de Connexion -->
+    <div id="login-page" class="page active">
+        <div class="logo-container">
+            <img src="../images/Ph.png" alt="Logo PharmaHome" class="logo">
+            <h1>PharmaHome</h1>
+        </div>
+        <form id="login-form">
+            <h2>Connexion</h2>
+            <input type="email" id="login-email" placeholder="Adresse email" required>
+            <input type="password" id="login-password" placeholder="Mot de passe" required>
+            <button type="submit">Se connecter</button>
+            <p>Pas encore inscrit ? <a href="#" id="show-signup">S'inscrire</a></p>
+        </form>
+    </div>
+
+    <!-- Page d'Inscription -->
+    <div id="signup-page" class="page">
+        <form id="signup-form">
+            <h2>Inscription</h2>
+            <input type="email" id="signup-email" placeholder="Adresse email" required>
+            <input type="password" id="signup-password" placeholder="Mot de passe" required>
+            <button type="submit">S'inscrire</button>
+            <p id="signup-error"></p>
+            <p>Déjà inscrit ? <a href="#" id="show-login">Se connecter</a></p>
+        </form>
+    </div>
+
+    <!-- Page Informations Personnelles -->
+    <div id="user-info-page" class="page">
+        <form id="user-info-form">
+            <h2>Informations Personnelles</h2>
+            <input type="text" id="first-name" placeholder="Prénom" required>
+            <input type="text" id="last-name" placeholder="Nom" required>
+            <input type="number" id="age" placeholder="Âge" required>
+            <span id="age-unit">ans</span>
+            <input type="text" id="doctor-name" placeholder="Dr. Nom du médecin" required>
+            <input type="text" id="doctor-postal-code" placeholder="Code postal" required>
+            <input type="text" id="doctor-city" placeholder="Ville" required>
+            <input type="tel" id="doctor-phone" placeholder="Numéro de téléphone du médecin" required>
+            <button type="submit">Enregistrer</button>
+        </form>
+    </div>
+
+    <!-- Interface de l'utilisateur -->
+    <div id="dashboard-page" class="page">
+        <header>
+            <div class="user-info">
+                <h2>Bienvenue, <span id="user-name"></span></h2>
+                <div class="user-initials" id="user-initials"></div>
+            </div>
+            <button id="logout-btn" class="logout-btn">Se déconnecter</button>
+            <p id="current-date">23 Septembre 2024</p>
+        </header>
+
+        <div id="user-details" class="hidden">
+            <p><strong>Nom :</strong> <span id="full-name"></span></p>
+            <p><strong>Âge :</strong> <span id="user-age"></span></p>
+            <p><strong>Numéro de sécurité sociale :</strong> <span id="user-ssn"></span></p>
+            <p><strong>Médecin traitant :</strong> Dr. <span id="doctor-name"></span></p>
+            <p><strong>Coordonnées :</strong> <span id="doctor-details"></span></p>
+            <button id="edit-info-btn">Modifier les informations</button>
+        </div>
+
+        <section class="dashboard">
+            <div class="dashboard-card">
+                <p>Stock de médicaments</p>
+                <button id="add-medication">Ajouter un médicament</button>
+                <button id="remove-medication">Enlever un médicament</button>
+            </div>
+
+            <div class="dashboard-card">
+                <p>Coordonnées du médecin</p>
+                <button id="view-doctor">Voir</button>
+            </div>
+
+            <div class="dashboard-card">
+                <p>Recherche Médicament</p>
+                <input type="text" id="search-med" placeholder="Nom du médicament">
+                <button id="search-med-btn">Rechercher</button>
+            </div>
+        </section>
+
+        <nav class="bottom-nav">
+            <a href="#" class="nav-item active">Accueil</a>
+            <a href="#" class="nav-item">Inventaire</a>
+            <a href="#" class="nav-item">Mon Carnet</a>
+            <a href="#" class="nav-item">Réglages</a>
+        </nav>
+    </div>
+    <script src="auth.js"></script>
+    <script src="dashboard.js"></script>
+    <script src="api.js"></script>
+    <script src="medication.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,78 @@
+/* Global styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #89da8d;
+    color: #333;
+}
+
+h1,
+h2 {
+    color: #333;
+    text-align: center;
+}
+
+input,
+button {
+    display: block;
+    width: 90%;
+    margin: 10px auto;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #1c093e;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #1a218c;
+}
+
+.page {
+    display: none;
+    padding: 20px;
+}
+
+.page.active {
+    display: block;
+}
+
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.logo {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
+}
+
+/* Ajout du style pour le "ans" après l'âge (login page) */
+#age-unit {
+    display: inline-block;
+    margin-left: 10px;
+    font-size: 16px;
+    color: #333;
+}
+
+/* Responsive design */
+@media (min-width: 768px) {
+    body {
+        font-size: 18px;
+    }
+
+    input,
+    button {
+        width: 80%;
+    }
+}
